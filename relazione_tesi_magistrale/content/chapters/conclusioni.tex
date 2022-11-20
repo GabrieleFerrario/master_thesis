@@ -1,0 +1,42 @@
+\chapter{Conclusioni}
+In questa tesi magistrale sono stati esplorati i progressi dell'Image Captioning soffermandosi principalmente sulla componente di image understanding con l'obiettivo di sviluppare un prototipo che cercasse di migliorare la comprensione dell'immagine.
+
+
+Nella Sezione \ref{obiettivo} sono state poste le seguenti domande di ricerca:
+\begin{enumerate}[leftmargin=1.5cm,label=\textit{RQ\arabic*:},ref=\textit{RQ\arabic*}]
+    \item\label{rq_1}\textit{Com'è possibile migliorare la componente di image understanding nelle tecniche di Image Captioning dello stato dell'arte?}
+    \item\label{rq_2}\textit{Come può essere implementata la componente di Image Segmentation?}
+    \item\label{rq_3}\textit{Come può essere migliorata la componente di Image Segmentation?}
+    \item\label{rq_4}\textit{Come si comporta \acrshort{oscar}$_+$ con gli oggetti segmentati?}
+    \item\label{rq_5}\textit{Quali sono i benefici dell'uso dell'Image Segmentation nei modelli di Image Captioning dello stato dell'arte?}
+\end{enumerate}
+
+
+Inizialmente è stato studiato lo stato dell'arte degli approcci di Image Captioning, osservando che gli approcci di generazione diretta delle didascalie basati sui modelli di Object Detection e sui modelli linguistici siano i più popolari. Il modello di Object Detection utilizzato è una variante di \acrshort{faster_rcnn} progettata appositamente per questa tipologia di task, la quale ha permesso il raggiungimento di performance allo stato dell'arte.
+Tra i modelli linguistici è stato scelto un modello costruito su \acrshort{bert} chiamato \acrshort{oscar}$_+$, il quale è stato pre-addestrato su molti task composti da una componente visiva e da una componente linguistica. \acrshort{oscar}$_+$ è un modello generico che ha appreso rappresentazioni cross-modali e il suo fine-tuning sul compito specifico permette di ottenere risultati allo stato dell'arte.
+
+
+In questa tesi sono state condotte alcune analisi sul modello di Object Detection selezionato e nonostante sia stato appositamente sviluppato per questa tipologia di task esistono diverse regioni, rappresentanti oggetti di classi diverse, codificate tramite feature molto simili. 
+Infatti, le regioni visive estratte sono risultate spesso sovrapposte, rumorose e ambigue, questo inevitabilmente risulta in feature delle regioni meno significative. Pertanto, è stata posta la domanda di ricerca \ref{rq_1}. Quindi è stato condotto uno studio che cerca di risolvere questo problema. La soluzione identificata prevede un approccio innovativo che sfrutta il task di Image Segmentation nella componente di image understanding. In questa tesi è stata scelta questa soluzione perché l'Image Segmentation per ogni istanza oltre a predire il tag e la bounding box predice anche una maschera binaria, la quale consente di segmentare l'oggetto rimuovendo il rumore.
+
+
+Nello stato dell'arte non sono stati trovati approcci che sfruttano dei modelli di segmentazione progettati appositamente per questa tipologia di task. Pertanto, è stata posta la domanda di ricerca \ref{rq_2} e in questa tesi è stato implementato un approccio di segmentazione che prevede l'utilizzo di due modelli di segmentazione già addestrati con ottime performance. Nel dettaglio si tratta del modello \acrshort{detr} di Panoptic Segmentation allenato su \acrshort{coco} Panoptic e di una \acrshort{mask_rcnn} di Instance Segmentation allenata su \acrshort{lvis}.
+
+
+L'ensemble dei modelli di segmentazione riesce a predire meno classi rispetto al modello di Object Detection utilizzato e spesso oggetti molto importanti, che sono imprescindibili per la comprensione del contenuto visivo e per la generazione della caption, non vengono rilevati. Inoltre, l'ensemble dei modelli di segmentazione a volte ha difficoltà nella predizione delle classi corrette.
+Quindi è stata posta la domanda di ricerca \ref{rq_3}.
+In questa tesi le risorse computazionali sono state limitate e i risultati dell'ensemble dei modelli di segmentazione sono stati migliorati tramite una pipeline che sfrutta le predizioni ottenute dal modello di Object Detection, includendo gli oggetti mancanti e correggendo le classi assegnate scorrettamente.
+La soluzione migliore sarebbe stata quella di progettare un modello di segmentazione pensato appositamente per questa tipologia di task in grado di predire molte classi diverse con buone performance, utilizzando tecniche di data augmentation efficaci per gestire adeguatamente le classi sbilanciate e il bilanciamento dei dataset utilizzati.% (seguendo un approccio simile a quello utilizzato per definire il modello di Object Detection).
+
+La risposta alle domande \ref{rq_4} e \ref{rq_5} è stata ottenuta utilizzando il dataset Flickr30K. 
+Le immagini di questo dataset sono state processate utilizzando i vari approcci di image understanding implementati e le feature ottenute sono state utilizzate per effettuare il fine-tuning di \acrshort{oscar}$_+$ sul task di Image Captioning. I modelli fine-tuned ottenuti sono stati testati sullo split di test utilizzando varie metriche, le quali consentono di catturare caratteristiche linguistiche differenti.
+
+Analizzando i risultati è emerso che le sole feature ottenute tramite l'ensemble dei modelli di segmentazione non sono sufficienti per ottenere performance superiori rispetto al modello linguistico fine-tuned tramite Object Detection, poichè spesso non vengono rilevati oggetti importanti presenti nelle didascalie di riferimento. Tramite un'analisi qualitativa sono stati compresi meglio i risultati ed è stata trovata una risposta alla domanda \ref{rq_4}. Dall'analisi è emerso che nelle immagini in cui tutti gli oggetti più importanti vengono rilevati si ottengono didascalie di buona qualità. 
+La combinazione tra Image Segmentation e Object Detection ha permesso alla segmentazione di ottenere miglioramenti significativi nelle prestazioni. Quindi è sembrato che \acrshort{oscar}$_+$ sia in grado di utilizzare correttamente anche gli oggetti segmentati.
+
+
+La prova composta da tutte le feature estratte sia tramite l'Image Segmentation che tramite l'Object Detection ha ottenuto le performance più elevate superando leggermente quelle ottenute tramite la sola Object Detection, poichè su tre delle quattro metriche di valutazione utilizzate ha ottenuto i risultati migliori. Quindi, questo risultato ha permesso di rispondere alla domanda \ref{rq_5}, dimostrando che l'inclusione dell'Image Segmentation porta dei benefici ai modelli di Image Captioning dello stato dell'arte su alcune metriche di valutazione. Inoltre, valutando qualitativamente alcune immagini è stata notata nelle didascalie ottenute la presenza di alcuni dettagli non catturati con la sola Object Detection.
+Nonostante abbia migliorato leggermente le performance ha anche complicato notevolmente la fase di estrazione delle feature aumentandone il tempo necessario.
+
+
+Le domande \ref{rq_4} e \ref{rq_5} avrebbero bisogno di un modello di segmentazione robusto progettato per questa tipologia di task, in grado di predire molti oggetti di classi diverse con buone performance, per trovare delle risposte più esaustive.

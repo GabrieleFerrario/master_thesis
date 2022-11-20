@@ -1,0 +1,54 @@
+\chapter{Introduzione}
+L'Image Captioning consiste nella generazione automatica di una descrizione in linguaggio naturale di un'immagine, solitamente viene affrontato tramite un sistema di image understanding e un modello linguistico capace di generare frasi.
+L'image understanding comporta l'individuazione e il riconoscimento degli oggetti, la comprensione del tipo di scena, l'individuazione delle proprietà degli oggetti e delle loro interazioni.
+Mentre il modello linguistico deve essere in grado di sfruttare le informazioni visive per generare didascalie complete, significative e grammaticalmente corrette.
+Questo task ha attratto recentemente molto interesse sia per la sua importanza nelle applicazioni pratiche, per esempio può aiutare le persone ipovedenti facilitandole nella vita di tutti giorni, sia perché unisce due importanti campi dell'Intelligenza Artificiale: la \acrlong{cv} e il \acrlong{nlp}.
+
+
+\section{Approccio e contributo}
+
+Il lavoro di tesi è iniziato con l'analisi della letteratura sull'Image Captioning, osservando che gli approcci di generazione diretta delle didascalie basati sui modelli di Object Detection, per comprendere il contenuto visivo delle immagini, e sui modelli linguistici, per generare la caption di output, siano i più popolari.
+
+
+I modelli di Object Detection consentono di identificare tramite tag e localizzare tramite dei riquadri di delimitazione le regioni contenenti gli oggetti presenti in un'immagine. 
+
+Recentemente sono stati sviluppati modelli linguistici pre-addestrati su molti task composti da una componente visiva e da una componente linguistica (per esempio: Image Captioning, Visual Question Answering, Image Text Retrieval, etc), i quali consistono in modelli generici che hanno appreso rappresentazioni cross-modali e il loro fine-tuning sul compito specifico permette di ottenere risultati allo stato dell'arte \cite{zhou2020unified, li2019visualbert, li2020unicoder, li2020oscar, zhang2021vinvl}.
+Questi modelli pre-addestrati sono basati su Transformer multi-layer (per esempio \acrshort{bert}) e richiedono come input le feature delle regioni dell'immagine e le feature del testo, sfruttando il meccanismo di self-attention imparano allineamenti semantici tra le regioni dell'immagine e le parole del testo.
+
+
+La ricerca è stata ristretta a questa tipologia di modelli che si comportano molto bene sul task di Image Captioning.
+
+
+Il modello di Object Detection più utilizzato è \acrshort{faster_rcnn} e in questa tesi è stata utilizzata una sua variante progettata appositamente per questa tipologia di task, la quale ha permesso il raggiungimento di performance allo stato dell'arte. Il modello utilizzato è in grado di identificare istanze di oggetti appartenenti a 1594 classi diverse localizzandole tramite bounding box. Inoltre, è in grado di fornire rappresentazioni delle regioni significative ottenute da un layer intermedio del modello.
+
+Tra i modelli linguistici è stato scelto un modello costruito su \acrshort{bert} chiamato \acrshort{oscar}$_+$ \cite{li2020oscar, zhang2021vinvl}, il quale era il modello con le performance più elevate sul problema trattato quando è iniziata questa tesi (questo non è stato un vantaggio perché il codice disponibile aveva delle mancanze e la documentazione non era soddisfacente). OSCAR$_+$ rispetto agli altri approcci risulta essere innovativo, poiché facilita la generazione delle didascalie utilizzando i tag degli oggetti presenti nell'immagine.
+I tag oggetto svolgono la funzione di punti di collegamento che facilitano l'apprendimento degli allineamenti semantici tra immagini e testi, consentendo l'apprendimento di migliori rappresentazioni cross-modali.
+Il pre-training e il fine-tuning di \acrshort{oscar}$_+$ prevedono come input delle triple, ognuna delle quali prevede una sequenza di parole, un insieme di tag di oggetti e un insieme di feature delle regioni dell'immagine.
+
+
+In questa tesi sono state condotte alcune analisi sul modello di Object Detection selezionato e nonostante sia stato appositamente sviluppato per questa tipologia di task esistono diverse regioni, rappresentanti oggetti di classi diverse, codificate tramite feature molto simili. Questo problema si verifica quando l'immagine contiene oggetti vicini che molto spesso sono sovrapposti. Quindi è stato condotto uno studio che cerca di risolvere questo problema, includendo un approccio innovativo che sfrutta il task di Image Segmentation nella componente di image understanding. L'Image Segmentation per ogni istanza oltre a predire il tag e la bounding box predice anche una maschera binaria, la quale consente di segmentare l'oggetto rimuovendo il rumore.
+Il dataset più utilizzato per affrontare il task di Image Captioning è \acrshort{coco} \cite{lin2014microsoft}, il quale è composto da circa 120k immagini con cinque didascalie ciascuna, ma in questa tesi le risorse sono state limitate e il task di Image Captioning è solitamente affrontato con cluster composti da svariate GPU. Quindi è stato utilizzato il dataset Flickr30K \cite{young2014image} che prevede circa 30k immagini con cinque didascalie ciascuna. Nonostante sia meno popolare di \acrshort{coco} risulta comunque utilizzato quando si hanno a disposizione poche risorse computazionali, poiché consente di effettuare valutazioni significative richiedendo meno tempo per essere processato e utilizzato per il training dei modelli di Image Captioning.
+
+\section{Obiettivo}\label{obiettivo}
+L'obiettivo di questa tesi magistrale è quello di esplorare e analizzare gli attuali progressi nell'Image Captioning. Tramite l'analisi effettuata verrà proposto un prototipo che cercherà di risolvere il problema, inoltre la proposta considererà tutte le osservazioni raccolte e cercherà di migliorare la componente di image understanding negli approcci individuati.\\
+Pertanto, le principali domande di ricerca a cui si cerca di risponde sono:
+\begin{enumerate}[leftmargin=1.5cm,label=\textit{RQ\arabic*:},ref=\textit{RQ\arabic*}]
+    \item\textit{Com'è possibile migliorare la componente di image understanding nelle tecniche di Image Captioning dello stato dell'arte?}
+    \item\textit{Come può essere implementata la componente di Image Segmentation?}
+    \item\textit{Come può essere migliorata la componente di Image Segmentation?}
+    \item\textit{Come si comporta \acrshort{oscar}$_+$ con gli oggetti segmentati?}
+    \item \textit{Quali sono i benefici dell'uso dell'Image Segmentation nei modelli di Image Captioning dello stato dell'arte?}
+\end{enumerate}
+
+\section{Outline}
+Nel secondo capitolo vengono introdotti alcuni concetti teorici e alcune tecniche essenziali per comprendere il contenuto di questa tesi.
+
+Nel terzo capitolo vengono presentati gli attuali progressi nell'Image Captioning soffermandosi sugli approcci più significativi e innovativi; inoltre, vengono presentati i dataset e le metriche di valutazione più utilizzate in questo task.
+
+Nel quarto capitolo viene illustrato l'approccio utilizzato per affrontare il task di Image Captioning, soffermandosi sulla componente di image understanding e sul modello linguistico.
+
+Nel quinto capitolo vengono riportati i risultati dei test effettuati svolgendo un'analisi quantitativa, basata sulle metriche di valutazione più utilizzate, e un'analisi qualitativa, effettuata analizzando qualitativamente le didascalie generate per alcune immagini appartenenti al test set.
+
+Il sesto capitolo riassume l'approccio sviluppato e risponde alle domande di ricerca che sono state poste.
+
+Infine, il settimo capitolo propone alcuni sviluppi futuri promettenti e interessanti che potrebbero essere implementati per migliorare i modelli allo stato dell'arte.

@@ -1,0 +1,17 @@
+\selectlanguage{english} 
+\begin{abstract}
+
+Recentemente sono stati sviluppati modelli linguistici basati su Transformer multi-layer (per esempio \acrshort{bert}), pre-addestrati per compiti che prevedono una componente visiva e una linguistica (per esempio: Image Captioning, Visual Question Answering, Image Text Retrieval, etc). Questi modelli sfruttano il meccanismo di self-attention per imparare allineamenti semantici tra le regioni dell’immagine e le parole del testo. Le regioni dell'immagine vengono estratte tramite un modello di Object Detection. 
+
+In questa tesi viene trattato il compito di Image Captioning, che consiste nella generazione automatica di una descrizione in linguaggio naturale di un'immagine.
+Questo task solitamente viene affrontato tramite un sistema di image understanding (visual encoder) e un modello linguistico capace di generare frasi.
+
+
+Il lavoro di questa tesi è stato basato su un visual encoder composto da un modello di Object Detection, costruito appositamente per questa tipologia di task, e su un modello linguistico creato su \acrshort{bert} chiamato \acrshort{oscar}$_+$, il cui fine-tuning sul task specifico ha consentito il raggiungimento di performance allo stato dell'arte.
+
+
+Nonostante il modello di Object Detection utilizzato sia stato appositamente sviluppato per questa tipologia di task esistono diverse regioni, rappresentanti oggetti di classi diverse, codificate tramite feature molto simili. Infatti, le regioni visive estratte sono state spesso sovrapposte, rumorose e ambigue, questo inevitabilmente è risultato in feature meno significative. Pertanto, in questa tesi è stata proposta una soluzione che cerca di risolvere questo problema, la quale prova a migliorare la componente di image understanding sfruttando il task di Image Segmentation e la sua combinazione con il modello di Object Detection. 
+
+Analizzando i risultati è emerso che le sole feature ottenute tramite Image Segmentation non sono sufficienti per ottenere performance superiori rispetto a quelle prodotte dal modello linguistico fine-tuned tramite Object Detection. La combinazione tra Image Segmentation e Object Detection ha permesso ai modelli linguistici di ottenere miglioramenti su alcune metriche di valutazione.
+
+\end{abstract}

@@ -1,0 +1,560 @@
+\glsdefs@newdocentry{NLP}%
+{%
+name={NLP},%
+sort={NLP},%
+type={acronym},%
+first={Natural Language Processing\glsspace (NLP)},%
+firstplural={Natural Language Processing\acrpluralsuffix \glsspace (NLP\acrpluralsuffix )},%
+text={NLP},%
+plural={NLP\acrpluralsuffix },%
+description={Natural Language Processing},%
+descriptionplural={Natural Language Processing\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Natural Language Processing},%
+longplural={Natural Language Processings},%
+short={NLP},%
+shortplural={NLPs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{CV}%
+{%
+name={CV},%
+sort={CV},%
+type={acronym},%
+first={Computer Vision\glsspace (CV)},%
+firstplural={Computer Vision\acrpluralsuffix \glsspace (CV\acrpluralsuffix )},%
+text={CV},%
+plural={CV\acrpluralsuffix },%
+description={Computer Vision},%
+descriptionplural={Computer Vision\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Computer Vision},%
+longplural={Computer Visions},%
+short={CV},%
+shortplural={CVs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{NLG}%
+{%
+name={NLG},%
+sort={NLG},%
+type={acronym},%
+first={Natural Language Generation\glsspace (NLG)},%
+firstplural={Natural Language Generation\acrpluralsuffix \glsspace (NLG\acrpluralsuffix )},%
+text={NLG},%
+plural={NLG\acrpluralsuffix },%
+description={Natural Language Generation},%
+descriptionplural={Natural Language Generation\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Natural Language Generation},%
+longplural={Natural Language Generations},%
+short={NLG},%
+shortplural={NLGs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{CNN}%
+{%
+name={CNN},%
+sort={CNN},%
+type={acronym},%
+first={Convolutional neural network\glsspace (CNN)},%
+firstplural={Convolutional neural network\acrpluralsuffix \glsspace (CNN\acrpluralsuffix )},%
+text={CNN},%
+plural={CNN\acrpluralsuffix },%
+description={Convolutional neural network},%
+descriptionplural={Convolutional neural network\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Convolutional neural network},%
+longplural={Convolutional neural networks},%
+short={CNN},%
+shortplural={CNNs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{RNN}%
+{%
+name={RNN},%
+sort={RNN},%
+type={acronym},%
+first={Recurrent neural network\glsspace (RNN)},%
+firstplural={Recurrent neural network\acrpluralsuffix \glsspace (RNN\acrpluralsuffix )},%
+text={RNN},%
+plural={RNN\acrpluralsuffix },%
+description={Recurrent neural network},%
+descriptionplural={Recurrent neural network\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Recurrent neural network},%
+longplural={Recurrent neural networks},%
+short={RNN},%
+shortplural={RNNs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{BRNN}%
+{%
+name={BRNN},%
+sort={BRNN},%
+type={acronym},%
+first={Bidirectional Recurrent neural network\glsspace (BRNN)},%
+firstplural={Bidirectional Recurrent neural network\acrpluralsuffix \glsspace (BRNN\acrpluralsuffix )},%
+text={BRNN},%
+plural={BRNN\acrpluralsuffix },%
+description={Bidirectional Recurrent neural network},%
+descriptionplural={Bidirectional Recurrent neural network\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Bidirectional Recurrent neural network},%
+longplural={Bidirectional Recurrent neural networks},%
+short={BRNN},%
+shortplural={BRNNs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{LSTM}%
+{%
+name={LSTM},%
+sort={LSTM},%
+type={acronym},%
+first={Long short-term memory\glsspace (LSTM)},%
+firstplural={Long short-term memory\acrpluralsuffix \glsspace (LSTM\acrpluralsuffix )},%
+text={LSTM},%
+plural={LSTM\acrpluralsuffix },%
+description={Long short-term memory},%
+descriptionplural={Long short-term memory\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Long short-term memory},%
+longplural={Long short-term memorys},%
+short={LSTM},%
+shortplural={LSTMs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{FSM}%
+{%
+name={FSM},%
+sort={FSM},%
+type={acronym},%
+first={Finite-state machine\glsspace (FSM)},%
+firstplural={Finite-state machine\acrpluralsuffix \glsspace (FSM\acrpluralsuffix )},%
+text={FSM},%
+plural={FSM\acrpluralsuffix },%
+description={Finite-state machine},%
+descriptionplural={Finite-state machine\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Finite-state machine},%
+longplural={Finite-state machines},%
+short={FSM},%
+shortplural={FSMs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{RCNN}%
+{%
+name={RCNN},%
+sort={RCNN},%
+type={acronym},%
+first={Region Convolutional Neural Network\glsspace (RCNN)},%
+firstplural={Region Convolutional Neural Network\acrpluralsuffix \glsspace (RCNN\acrpluralsuffix )},%
+text={RCNN},%
+plural={RCNN\acrpluralsuffix },%
+description={Region Convolutional Neural Network},%
+descriptionplural={Region Convolutional Neural Network\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Region Convolutional Neural Network},%
+longplural={Region Convolutional Neural Networks},%
+short={RCNN},%
+shortplural={RCNNs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{MRF}%
+{%
+name={MRF},%
+sort={MRF},%
+type={acronym},%
+first={Markov Random Field\glsspace (MRF)},%
+firstplural={Markov Random Field\acrpluralsuffix \glsspace (MRF\acrpluralsuffix )},%
+text={MRF},%
+plural={MRF\acrpluralsuffix },%
+description={Markov Random Field},%
+descriptionplural={Markov Random Field\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Markov Random Field},%
+longplural={Markov Random Fields},%
+short={MRF},%
+shortplural={MRFs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{FCN}%
+{%
+name={FCN},%
+sort={FCN},%
+type={acronym},%
+first={Fully Convolutional Network\glsspace (FCN)},%
+firstplural={Fully Convolutional Network\acrpluralsuffix \glsspace (FCN\acrpluralsuffix )},%
+text={FCN},%
+plural={FCN\acrpluralsuffix },%
+description={Fully Convolutional Network},%
+descriptionplural={Fully Convolutional Network\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Fully Convolutional Network},%
+longplural={Fully Convolutional Networks},%
+short={FCN},%
+shortplural={FCNs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{ViT}%
+{%
+name={ViT},%
+sort={ViT},%
+type={acronym},%
+first={Vision Transformer\glsspace (ViT)},%
+firstplural={Vision Transformer\acrpluralsuffix \glsspace (ViT\acrpluralsuffix )},%
+text={ViT},%
+plural={ViT\acrpluralsuffix },%
+description={Vision Transformer},%
+descriptionplural={Vision Transformer\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Vision Transformer},%
+longplural={Vision Transformers},%
+short={ViT},%
+shortplural={ViTs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{R-CNN}%
+{%
+name={R-CNN},%
+sort={R-CNN},%
+type={acronym},%
+first={Region based Convolutional Neural Network\glsspace (R-CNN)},%
+firstplural={Region based Convolutional Neural Network\acrpluralsuffix \glsspace (R-CNN\acrpluralsuffix )},%
+text={R-CNN},%
+plural={R-CNN\acrpluralsuffix },%
+description={Region based Convolutional Neural Network},%
+descriptionplural={Region based Convolutional Neural Network\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Region based Convolutional Neural Network},%
+longplural={Region based Convolutional Neural Networks},%
+short={R-CNN},%
+shortplural={R-CNNs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{ResNet}%
+{%
+name={ResNet},%
+sort={ResNet},%
+type={acronym},%
+first={Residual Neural Network\glsspace (ResNet)},%
+firstplural={Residual Neural Network\acrpluralsuffix \glsspace (ResNet\acrpluralsuffix )},%
+text={ResNet},%
+plural={ResNet\acrpluralsuffix },%
+description={Residual Neural Network},%
+descriptionplural={Residual Neural Network\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Residual Neural Network},%
+longplural={Residual Neural Networks},%
+short={ResNet},%
+shortplural={ResNets},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{GCN}%
+{%
+name={GCN},%
+sort={GCN},%
+type={acronym},%
+first={Graph Convolutional Network\glsspace (GCN)},%
+firstplural={Graph Convolutional Network\acrpluralsuffix \glsspace (GCN\acrpluralsuffix )},%
+text={GCN},%
+plural={GCN\acrpluralsuffix },%
+description={Graph Convolutional Network},%
+descriptionplural={Graph Convolutional Network\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Graph Convolutional Network},%
+longplural={Graph Convolutional Networks},%
+short={GCN},%
+shortplural={GCNs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{IoU}%
+{%
+name={IoU},%
+sort={IoU},%
+type={acronym},%
+first={Intersection over union\glsspace (IoU)},%
+firstplural={Intersection over union\acrpluralsuffix \glsspace (IoU\acrpluralsuffix )},%
+text={IoU},%
+plural={IoU\acrpluralsuffix },%
+description={Intersection over union},%
+descriptionplural={Intersection over union\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Intersection over union},%
+longplural={Intersection over unions},%
+short={IoU},%
+shortplural={IoUs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{VLP}%
+{%
+name={VLP},%
+sort={VLP},%
+type={acronym},%
+first={Vision-Language Pretraining\glsspace (VLP)},%
+firstplural={Vision-Language Pretraining\acrpluralsuffix \glsspace (VLP\acrpluralsuffix )},%
+text={VLP},%
+plural={VLP\acrpluralsuffix },%
+description={Vision-Language Pretraining},%
+descriptionplural={Vision-Language Pretraining\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Vision-Language Pretraining},%
+longplural={Vision-Language Pretrainings},%
+short={VLP},%
+shortplural={VLPs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{SoTA}%
+{%
+name={SoTA},%
+sort={SoTA},%
+type={acronym},%
+first={State of the Arts\glsspace (SoTA)},%
+firstplural={State of the Arts\acrpluralsuffix \glsspace (SoTA\acrpluralsuffix )},%
+text={SoTA},%
+plural={SoTA\acrpluralsuffix },%
+description={State of the Arts},%
+descriptionplural={State of the Arts\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={State of the Arts},%
+longplural={State of the Artss},%
+short={SoTA},%
+shortplural={SoTAs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{LVIS}%
+{%
+name={LVIS},%
+sort={LVIS},%
+type={acronym},%
+first={Large Vocabulary Instance Segmentation\glsspace (LVIS)},%
+firstplural={Large Vocabulary Instance Segmentation\acrpluralsuffix \glsspace (LVIS\acrpluralsuffix )},%
+text={LVIS},%
+plural={LVIS\acrpluralsuffix },%
+description={Large Vocabulary Instance Segmentation},%
+descriptionplural={Large Vocabulary Instance Segmentation\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Large Vocabulary Instance Segmentation},%
+longplural={Large Vocabulary Instance Segmentations},%
+short={LVIS},%
+shortplural={LVISs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{DETR}%
+{%
+name={DETR},%
+sort={DETR},%
+type={acronym},%
+first={State of the Arts\glsspace (DETR)},%
+firstplural={State of the Arts\acrpluralsuffix \glsspace (DETR\acrpluralsuffix )},%
+text={DETR},%
+plural={DETR\acrpluralsuffix },%
+description={State of the Arts},%
+descriptionplural={State of the Arts\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={State of the Arts},%
+longplural={State of the Artss},%
+short={DETR},%
+shortplural={DETRs},%
+counter={page},%
+parent={},%
+%
+}%
+

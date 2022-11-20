@@ -1,0 +1,143 @@
+\documentclass[%
+    corpo=11pt,
+    oneside,
+%    stile=classica,
+    oldstyle,
+%    autoretitolo,
+    tipotesi=magistrale,
+    greek,
+    evenboxes,
+%    cucitura=7mm
+]{toptesi}
+
+\usepackage{float}
+\usepackage[pagestyles]{titlesec}
+\titleformat{\chapter}[display]{\normalfont\bfseries}{}{0pt}{\Huge}
+\newpagestyle{mystyle}
+{\sethead[\thepage][][\chaptertitle]{}{}{\thepage}}
+\pagestyle{mystyle}
+\usepackage[utf8]{inputenc}% codifica d'entrata
+\usepackage[T1]{fontenc}%    codifica dei font
+\usepackage{lmodern}%        scelta dei font
+%\usepackage[hyperfootnotes=false]{hyperref}
+\usepackage{blindtext}
+\usepackage{subcaption}
+\usepackage{caption}
+
+\usepackage{import}
+
+\usepackage{hyperref}
+\usepackage{wrapfig}
+
+\usepackage[dvipsnames]{xcolor}
+\hypersetup{
+    pdfpagemode={UseOutlines},
+    bookmarksopen,
+    pdfstartview={FitH},
+    colorlinks,
+    linkcolor={black},
+    citecolor={black},
+    urlcolor={black}
+  }
+\usepackage{enumerate}
+\usepackage[shortlabels]{enumitem}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage[]{geometry}
+\graphicspath{ {./images/} }  
+
+\usepackage[acronym]{glossaries}
+
+\makeglossaries
+\input{glossaries.tex}
+
+
+\interfootnotelinepenalty=10000
+
+
+\begin{document}
+\pagenumbering{roman}
+
+
+
+
+\begin{titlepage}
+        
+        \noindent
+        \begin{minipage}[t]{0.19\textwidth}
+            \vspace{-7mm}{\includegraphics[scale=1.3]{logo_unimib.pdf}}
+        \end{minipage}
+        \hspace{8mm}
+        \begin{minipage}[t]{0.81\textwidth}
+        {
+                \setstretch{1.35}
+                {\textsc{Università degli Studi di Milano - Bicocca}} \\
+                \textbf{Scuola di Scienze} \\
+                \textbf{Dipartimento di Informatica, Sistemistica e Comunicazione} \\
+                \textbf{Corso di laurea magistrale in Informatica} \\
+                \par
+        }
+        \end{minipage}
+        
+	\vspace{40mm}
+        
+	\begin{center}
+            {\LARGE{
+                    \setstretch{1.2}
+                    \textbf{Image Captioning using image understanding and BERT \\}
+                    \par
+            }}
+        \end{center}
+        
+        \vspace{50mm}
+
+        \noindent
+        {\large \textbf{Relatore:} Prof. Simone Bianco } \\
+
+        \noindent
+        {\large \textbf{Correlatore:} Prof. Paolo Napoletano}
+        
+        \vspace{12mm}
+
+        \begin{flushright}
+            {\large \textbf{Relazione della prova finale di:}} \\
+            \large{Gabriele Ferrario} \\
+            \large{Matricola 817518} 
+        \end{flushright}
+        
+        \vspace{16mm}
+        \begin{center}
+            {\large{\bf Anno Accademico 2021-2022}}
+        \end{center}
+
+        \restoregeometry
+        
+\end{titlepage}
+\newgeometry{top=0.8in, right=1.6in, left=1.6in, footskip=0.6in}
+
+\input{content/abstract.tex}
+
+\clearpage
+
+%\tablespagetrue\figurespagetrue % normalmente questa riga non serve ed e' commentata
+\selectlanguage{italian}
+\tableofcontents
+
+\printglossary[type=\acronymtype]
+
+
+\mainmatter
+\doublespacing
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\input{content/chapters.tex}
+
+
+\bibliographystyle{ieeetr}
+
+\bibliography{Bibliography}
+
+\end{document}

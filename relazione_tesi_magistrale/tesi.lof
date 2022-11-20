@@ -1,0 +1,12 @@
+\babel@toc {italian}{}
+\babel@toc {italian}{}
+\babel@toc {italian}{}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Immagine di esempio di Flickr30K (id \textit {1989609}) con le seguenti caption di riferimento: 1) A man wearing blue coveralls is handing a tool to another person; 2) A man in a navy blue jacket holding a tool in his dirty hand; 3) A man in a work uniform passing a tool to another person; 4) Man in a blue jumpsuit attempts to repair an escalator; 5) A man with a mustache works on a broken escalator. }}{28}{figure.2.1}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Immagine di esempio di Flickr30K (id \textit {101362133}) con le seguenti caption di riferimento: 1) A young female student performing a downward kick to break a board held by her Karate instructor; 2) Girl about to kick a piece of wood in half while karate instructor holds it; 3) A girl kicking a stick that a man is holding in tae kwon do class; 4) A girl in karate uniform breaking a stick with a front kick; 5) A girl breaking boards by using karate. }}{29}{figure.2.2}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Immagine di esempio di COCO (id \textit {000000581539}) con le seguenti caption di riferimento: 1) Dozens of animal and character shaped floats flying in the air; 2) The sky is full of many colorful flying kites; 3) A bunch of colorful kites flying in the sky; 4) A large number of different kites in the air; 5) A sky filled with kites of every color next to a lush green hillside. }}{29}{figure.2.3}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Risultato del modello di object detection su un'immagine in cui vengono evidenziate alcune regioni sovrapposte, rumorose ed ambigue che rappresentano istanze diverse (Flickr30K id 1000092795).}}{40}{figure.3.1}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Illustrazione riassuntiva dell'estrazione delle features degli oggetti ottenuti tramite Image Segmentation.}}{42}{figure.3.2}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Illustrazione riassuntiva del pretraining del modello $OSCAR_+$, il finetuning sul task di Image Captioning prevede come loss solo la $L_{MTL}$ e può essere effettuato utilizzando l'ensemble dei modelli di segmentazione.}}{44}{figure.3.3}%
