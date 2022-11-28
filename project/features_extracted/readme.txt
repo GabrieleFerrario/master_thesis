@@ -1,0 +1,1 @@
+questa folder contiene le feature estratte per tutti i test che ho effettuato (sono mancanti perchè pesano molto) e i notebook che ho usato per effettuare: analisi sulle feature; unione tra feature estratte tramite object detection e image segmentation.
