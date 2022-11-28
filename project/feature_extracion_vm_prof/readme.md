@@ -1,0 +1,2 @@
+This folder contains the codes that I used on prof’s VM to extract features via image segmentation (feature_extraction codes with versions).
+To execute the code you must have the folder given with the train.hw.tsv file and train.tsv; Moreover, there must be a folder test that contains the images referred to by the file train.hw.tsv and this code saves the features extracted by segmentation in the folder features_test creating a csv file for each image (then the various csv must be joined to get the complete file).
