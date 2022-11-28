@@ -1,1 +1,3 @@
-questa folder contiene le feature estratte per tutti i test che ho effettuato (sono mancanti perchè pesano molto) e i notebook che ho usato per effettuare: analisi sulle feature; unione tra feature estratte tramite object detection e image segmentation.
+This folder contains the features extracted for all the tests I have done (they are missing because they weigh a lot) and the notebooks I used to do:
+1. analysis of features; 
+2. merging features extracted by object detection and image segmentation.
